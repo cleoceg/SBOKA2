@@ -1,0 +1,69 @@
+
+<h1 class="display-4">{{data.overview.title}}</h1>
+
+<!-- Start overview -->
+<div class="row">
+	<div class="col-sm-12">
+		<div class="card card-block">
+			<h4 class="card-title">{{data.overview.title}}</h4>					
+			<div *ngFor="let item of data.overview.comment">
+				<p><span class="card-text" [innerHtml]="item"></span><p>
+			</div>
+		</div>        
+	</div>
+</div>
+<!-- End overview -->
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.factors.stitle}}" target="_self">{{data.factors.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.lifecycle.stitle}}" target="_self">{{data.lifecycle.title}}</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+
+    <div class="tab-pane active" id="{{data.factors.stitle}}" role="tabpanel" target="_self">
+        <!-- Start factors -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.factors.title}}</h4>					
+					<div *ngFor="let item of data.factors.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End factors -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.lifecycle.stitle}}" role="tabpanel" target="_self">
+        <!-- Start lifecycle -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.lifecycle.title}}</h4>					
+					<div *ngFor="let item of data.lifecycle.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End lifecycle -->
+		<!-- Start image para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.lifecycle.image}}" alt="self-organization">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- End image para -->	
+    </div>
+    
+</div>

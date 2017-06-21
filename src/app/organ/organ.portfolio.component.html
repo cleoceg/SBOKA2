@@ -1,0 +1,172 @@
+
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.definition.stitle}}" target="_self">{{data.definition.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.project.stitle}}" target="_self">{{data.project.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.portfolio.stitle}}" target="_self">{{data.portfolio.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.involvment.stitle}}" target="_self">{{data.involvment.title}}</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+
+    <div class="tab-pane active" id="{{data.definition.stitle}}" role="tabpanel" target="_self">
+		<!-- Start definition -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.definition.title}}</h4>					
+					<div *ngFor="let item of data.definition.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div> 
+				<!-- Start Examples -->
+				<div class="card card-block bg-faded" *ngFor="let example of data.examples">
+					<h4 class="card-title">{{example.title}}</h4>					
+					<div *ngFor="let item of example.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>
+				<!-- End Examples -->
+			</div>
+		</div>
+		<!-- End definition -->
+		
+		
+    </div>
+    
+    <div class="tab-pane" id="{{data.project.stitle}}" role="tabpanel" target="_self">
+		<!-- Start project -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.project.title}}</h4>
+					<div *ngFor="let item of data.folios.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+					<div *ngFor="let item of data.project.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End project -->
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.project.image}}" alt="#">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+		<!-- Start sos -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.sos.title}}</h4>					
+					<div *ngFor="let item of data.sos.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End sos -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.portfolio.stitle}}" role="tabpanel" target="_self">
+		<!-- Start portfolio -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.portfolio.title}}</h4>
+					<!--div class="card card-block" *ngFor="para in data.portfolio.comment""-->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.folios.title}}</h4>					
+								<div *ngFor="let item of data.folios.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.programs.title}}</h4>					
+								<div *ngFor="let item of data.programs.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>
+							<span *ngIf="data.programs.image">
+								<!-- image of the para -->
+								<div class="card card-block">
+									<div class="col-sm-12">
+										<div class="col-sm-2"></div>
+										<div class="col-sm-8">
+											<img class="w-100" src="/{{data.programs.image}}" alt="self-organization">
+										</div>
+										<div class="col-sm-2"></div>
+									</div>
+								</div>
+								<!-- end of image of the para -->
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.working.title}}</h4>					
+								<div *ngFor="let item of data.working.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.managing.title}}</h4>					
+								<div *ngFor="let item of data.managing.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>
+						</div>
+					</div>
+						
+					<!--/div-->        
+				</div>
+			</div>
+		</div>
+		<!-- End portfolio -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.involvment.stitle}}" role="tabpanel" target="_self">
+        <!-- Start Involvement -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.involvment.title}}</h4>					
+					<div *ngFor="let item of data.involvment.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Involvement -->
+    </div>
+    
+</div>
+
+

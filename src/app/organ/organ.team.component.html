@@ -1,0 +1,101 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+	<li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.title}}" target="_self">{{data.overview.title}}</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.table.title}}" target="_self">{{data.table.title}}</a>
+    </li>
+	<li class="nav-item">
+        <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.perso.stitle}}" target="_self">{{data.perso.title}}</a>
+    </li>
+	<li class="nav-item">
+        <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.size.stitle}}" target="_self">{{data.size.title}}</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+		
+		<div class="tab-pane active" id="{{data.overview.title}}" role="tabpanel" target="_self">
+            <!-- Start Overview -->
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="card card-block">
+						<h4 class="card-title">{{data.overview.title}}</h4>					
+						<div *ngFor="let item of data.overview.comment">
+							<p><span class="card-text" [innerHtml]="item"></span><p>
+						</div>
+					</div>        
+				</div>
+			</div>
+			<!-- End Overview -->
+		</div>
+		
+        <div class="tab-pane" id="{{data.table.title}}" role="tabpanel" target="_self">
+            <!-- Start table -->
+			<div class="card card-block">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th *ngFor="let head of data.table.head">
+								{{head}}
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let row of data.table.body">
+							<td *ngFor="let item of row">
+								<li><span [innerHtml]="item"></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+            </div>
+			<!-- End table -->
+		</div>
+		
+		<div class="tab-pane" id="{{data.perso.stitle}}" role="tabpanel" target="_self">
+            <!-- Start Perso -->
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="card card-block">
+						<h4 class="card-title">{{data.perso.title}}</h4>					
+						<div *ngFor="let item of data.perso.comment">
+							<p><span class="card-text" [innerHtml]="item"></span><p>
+						</div>
+					<!-- image of the para -->
+					<div class="card card-block">
+						<div class="col-sm-12">
+							<div class="col-sm-2"></div>
+							<div class="col-sm-8">
+								<img class="w-100" src="/{{data.perso.image}}" alt="self-organization">
+							</div>
+							<div class="col-sm-2"></div>
+						</div>
+					</div>
+					<!-- end of image of the para -->
+					</div>        
+				</div>
+			</div>
+			<!-- End Perso -->
+		</div>
+		
+		<div class="tab-pane" id="{{data.size.stitle}}" role="tabpanel" target="_self">
+            <!-- Start size -->
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="card card-block">
+						<h4 class="card-title">{{data.size.title}}</h4>					
+						<div *ngFor="let item of data.size.comment">
+							<p><span class="card-text" [innerHtml]="item"></span><p>
+						</div>
+					</div>        
+				</div>
+			</div>
+			<!-- End size -->
+		</div>
+		
+</div>
+
+

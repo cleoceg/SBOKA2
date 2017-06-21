@@ -1,0 +1,265 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.balancing.stitle}}" target="_self">{{data.balancing.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.achieving.stitle}}" target="_self">{{data.achieving.title}}</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="{{data.balancing.stitle}}" role="tabpanel" target="_self">
+        <!-- Start balancing -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.balancing.title}}</h4>					
+					<div *ngFor="let item of data.balancing.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End balancing -->
+    </div>
+	
+	<div class="tab-pane" id="{{data.achieving.stitle}}" role="tabpanel" target="_self">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+					
+					<ul class="nav nav-tabs">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.stitle}}" target="_self">{{data.overview.title}}</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" role="tab" href="#flex_iterative" target="_self">{{data.flex_iterative.title}}</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" role="tab" href="#flex_time" target="_self">{{data.flex_time.title}}</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" role="tab" href="#flex_cross" target="_self">{{data.flex_cross.title}}</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" role="tab" href="#flex_customer" target="_self">{{data.flex_customer.title}}</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" role="tab" href="#flex_integration" target="_self">{{data.flex_integration.title}}</a>
+						</li>
+					</ul>
+					
+					<div class="tab-content">
+					
+						<div class="tab-pane active" id="{{data.overview.stitle}}" role="tabpanel" target="_self">
+							<!-- Start overview -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="card card-block">
+										<h4 class="card-title">{{data.overview.title}}</h4>					
+										<div *ngFor="let item of data.overview.comment">
+											<p><span class="card-text" [innerHtml]="item"></span><p>
+										</div>
+									</div>        
+								</div>
+							</div>
+							<!-- End overview -->
+							<!-- Start image para -->
+							<div class="card card-block">
+								<div class="col-sm-12">
+									<div class="col-sm-2"></div>
+									<div class="col-sm-8">
+										<img class="w-100" src="/{{data.overview.image}}" alt="data.overview.title">
+									</div>
+									<div class="col-sm-2"></div>
+								</div>
+							</div>
+							<!-- End image para -->	
+							
+						</div>
+						
+						<div class="tab-pane" id="flex_iterative" role="tabpanel" target="_self">
+                            <!-- Start flex_iterative -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="card card-block">
+										<h4 class="card-title">{{data.flex_iterative.title}}</h4>					
+										<div *ngFor="let item of data.flex_iterative.comment">
+											<p><span class="card-text" [innerHtml]="item"></span><p>
+										</div>
+									</div>        
+								</div>
+							</div>
+							<!-- End flex_iterative -->
+                                                    
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" role="tab" href="#stakeholder" target="_self">{{data.stakeholder.title}}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" role="tab" href="#core_team" target="_self">{{data.core_team.title}}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" role="tab" href="#senior" target="_self">{{data.senior.title}}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" role="tab" href="#body" target="_self">{{data.body.title}}</a>
+                                </li>
+                            </ul>
+                                                    
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="stakeholder" role="tabpanel" target="_self">
+                                    <!-- Start flex_iterative stakeholder-->
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="card card-block">
+												<h4 class="card-title">{{data.stakeholder.title}}</h4>					
+												<div *ngFor="let item of data.stakeholder.comment">
+													<p><span class="card-text" [innerHtml]="item"></span><p>
+												</div>
+											</div>        
+										</div>
+									</div>
+									<!-- End flex_iterative stakeholder -->
+                                    <!-- Start image para -->
+									<div class="card card-block">
+										<div class="col-sm-12">
+											<div class="col-sm-2"></div>
+											<div class="col-sm-8">
+												<img class="w-100" src="/{{data.stakeholder.image}}" alt="{{data.stakeholder.title}}">
+											</div>
+											<div class="col-sm-2"></div>
+										</div>
+									</div>
+									<!-- End image para -->	
+                                </div>
+                                                        
+								<div class="tab-pane" id="core_team" role="tabpanel" target="_self">
+                                    <!-- Start flex_iterative core_team-->
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="card card-block">
+												<h4 class="card-title">{{data.core_team.title}}</h4>					
+												<div *ngFor="let item of data.core_team.comment">
+													<p><span class="card-text" [innerHtml]="item"></span><p>
+												</div>
+											</div>        
+										</div>
+									</div>
+									<!-- End flex_iterative core_team -->
+                                    <!-- Start image para -->
+									<div class="card card-block">
+										<div class="col-sm-12">
+											<div class="col-sm-2"></div>
+											<div class="col-sm-8">
+												<img class="w-100" src="/{{data.core_team.image}}" alt="{{data.core_team.title}}">
+											</div>
+											<div class="col-sm-2"></div>
+										</div>
+									</div>
+									<!-- End image para -->	                        
+                                </div>
+                                                        
+                                <div class="tab-pane" id="senior" role="tabpanel" target="_self">
+                                    <!-- Start flex_iterative senior-->
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="card card-block">
+												<h4 class="card-title">{{data.senior.title}}</h4>					
+												<div *ngFor="let item of data.senior.comment">
+													<p><span class="card-text" [innerHtml]="item"></span><p>
+												</div>
+											</div>        
+										</div>
+									</div>
+									<!-- End flex_iterative senior -->
+                                </div>
+                                                        
+                                <div class="tab-pane" id="body" role="tabpanel" target="_self">
+                                    <!-- Start flex_iterative body-->
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="card card-block">
+												<h4 class="card-title">{{data.body.title}}</h4>					
+												<div *ngFor="let item of data.body.comment">
+													<p><span class="card-text" [innerHtml]="item"></span><p>
+												</div>
+											</div>        
+										</div>
+									</div>
+									<!-- End flex_iterative body -->
+                                </div>
+                            </div>
+                                                    
+                        </div>
+						
+						<div class="tab-pane" id="flex_time" role="tabpanel" target="_self">
+							<!-- Start flex_time -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="card card-block">
+										<h4 class="card-title">{{data.flex_time.title}}</h4>					
+										<div *ngFor="let item of data.flex_time.comment">
+											<p><span class="card-text" [innerHtml]="item"></span><p>
+										</div>
+									</div>        
+								</div>
+							</div>
+							<!-- End flex_time -->
+						</div>
+						
+						<div class="tab-pane" id="flex_cross" role="tabpanel" target="_self">
+							<!-- Start flex_cross -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="card card-block">
+										<h4 class="card-title">{{data.flex_cross.title}}</h4>					
+										<div *ngFor="let item of data.flex_cross.comment">
+											<p><span class="card-text" [innerHtml]="item"></span><p>
+										</div>
+									</div>        
+								</div>
+							</div>
+							<!-- End flex_cross -->
+						</div>
+						
+						<div class="tab-pane" id="flex_customer" role="tabpanel" target="_self">
+							<!-- Start flex_customer -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="card card-block">
+										<h4 class="card-title">{{data.flex_customer.title}}</h4>					
+										<div *ngFor="let item of data.flex_customer.comment">
+											<p><span class="card-text" [innerHtml]="item"></span><p>
+										</div>
+									</div>        
+								</div>
+							</div>
+							<!-- End flex_customer -->
+						</div>
+						
+						<div class="tab-pane" id="flex_integration" role="tabpanel" target="_self">
+							<!-- Start flex_integration -->
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="card card-block">
+										<h4 class="card-title">{{data.flex_integration.title}}</h4>					
+										<div *ngFor="let item of data.flex_integration.comment">
+											<p><span class="card-text" [innerHtml]="item"></span><p>
+										</div>
+									</div>        
+								</div>
+							</div>
+							<!-- End flex_integration -->
+						</div>
+					</div>
+                    
+				</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

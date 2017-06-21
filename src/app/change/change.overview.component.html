@@ -1,0 +1,65 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.stitle}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.unapproved.stitle}}" target="_self">{{data.unapproved.title}}</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="{{data.overview.stitle}}" role="tabpanel" target="_self">
+        <!-- Start overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>					
+					<div *ngFor="let item of data.overview.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End overview -->
+    </div>
+   
+    <div class="tab-pane" id="{{data.unapproved.stitle}}" role="tabpanel" target="_self">
+        <!-- Start unapproved -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.unapproved.title}}</h4>					
+					<div *ngFor="let item of data.unapproved.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End unapproved -->
+		<!-- Start image para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.unapproved.image}}" alt="">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- End image para -->	
+		<!-- Start image para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.data.image}}" alt="">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- End image para -->	
+    </div>
+</div>

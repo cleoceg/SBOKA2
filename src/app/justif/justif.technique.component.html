@@ -1,0 +1,231 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.title}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.estimation.stitle}}" target="_self">{{data.estimation.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.planning.stitle}}" target="_self">{{data.planning.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.ranking.stitle}}" target="_self">{{data.ranking.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.story.stitle}}" target="_self">{{data.story.title}}</a>
+  </li>
+ </ul>
+
+ <div class="tab-content">
+
+    <div class="tab-pane active" id="{{data.overview.title}}" role="tabpanel" target="_self">
+        <!-- Start overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>					
+					<div *ngFor="let item of data.overview.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End overview -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.estimation.stitle}}" role="tabpanel" target="_self">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <!-- Start estimation -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.estimation.title}}</h4>					
+								<div *ngFor="let item of data.estimation.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>        
+						</div>
+					</div>
+					<!-- End estimation -->
+                    <div class="card card-block">
+                        <!-- Start estimation roi -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card card-block">
+									<h4 class="card-title">{{data.roi.title}}</h4>					
+									<div *ngFor="let item of data.roi.comment">
+										<p><span class="card-text" [innerHtml]="item"></span><p>
+									</div>
+								</div>        
+							</div>
+						</div>
+						<!-- End estimation roi -->
+                        
+                        <!-- Start estimation roi example -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card card-block bg-faded">
+									<h4 class="card-title">{{data.roi_example.title}}</h4>					
+									<div *ngFor="let item of data.roi_example.comment">
+										<p><span class="card-text" [innerHtml]="item"></span><p>
+									</div>
+								</div>        
+							</div>
+						</div>
+						<!-- End estimation roi example -->
+                    </div>
+                    
+                    <div class="card card-block">
+                        <!-- Start estimation npv -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card card-block">
+									<h4 class="card-title">{{data.npv.title}}</h4>					
+									<div *ngFor="let item of data.npv.comment">
+										<p><span class="card-text" [innerHtml]="item"></span><p>
+									</div>
+								</div>        
+							</div>
+						</div>
+						<!-- End estimation npv -->
+                        
+                        <!-- Start estimation npv example -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card card-block bg-faded">
+									<h4 class="card-title">{{data.npv_example.title}}</h4>					
+									<div *ngFor="let item of data.npv_example.comment">
+										<p><span class="card-text" [innerHtml]="item"></span><p>
+									</div>
+								</div>        
+							</div>
+						</div>
+						<!-- End estimation npv example -->
+                        
+                    </div>
+                    
+                    <div class="card card-block">
+                        <!-- Start estimation irr -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card card-block">
+									<h4 class="card-title">{{data.irr.title}}</h4>					
+									<div *ngFor="let item of data.irr.comment">
+										<p><span class="card-text" [innerHtml]="item"></span><p>
+									</div>
+								</div>        
+							</div>
+						</div>
+						<!-- End estimation irr -->
+                        
+                        <!-- Start estimation irr example -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card card-block bg-faded">
+									<h4 class="card-title">{{data.irr_example.title}}</h4>					
+									<div *ngFor="let item of data.irr_example.comment">
+										<p><span class="card-text" [innerHtml]="item"></span><p>
+									</div>
+								</div>        
+							</div>
+						</div>
+						<!-- End estimation irr example -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <div class="tab-pane" id="{{data.planning.stitle}}" role="tabpanel" target="_self">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <!-- Start planning overview -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.planning.overview.title}}</h4>					
+								<div *ngFor="let item of data.planning.overview.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>        
+						</div>
+					</div>
+					<!-- End planning overview -->
+                    
+                    <!-- Start planning value -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.vsm.title}}</h4>					
+								<div *ngFor="let item of data.vsm.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>        
+						</div>
+					</div>
+					<!-- End planning value -->
+                    
+                    <!-- Start planning customer -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.customer.title}}</h4>					
+								<div *ngFor="let item of data.customer.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>        
+						</div>
+					</div>
+					<!-- End planning customer -->
+					<!-- Start image para -->
+					<div class="card card-block">
+						<div class="col-sm-12">
+							<div class="col-sm-2"></div>
+							<div class="col-sm-8">
+								<img class="w-100" src="/{{data.customer.image}}" alt="{{data.customer.title}}">
+							</div>
+							<div class="col-sm-2"></div>
+						</div>
+					</div>
+					<!-- End image para -->	
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <div class="tab-pane" id="{{data.ranking.stitle}}" role="tabpanel" target="_self">
+        <!-- Start ranking -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.ranking.title}}</h4>					
+					<div *ngFor="let item of data.ranking.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End ranking -->
+    </div>
+     
+    <div class="tab-pane" id="{{data.story.stitle}}" role="tabpanel" target="_self">
+        <!-- Start story -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.story.title}}</h4>					
+					<div *ngFor="let item of data.story.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End story -->
+    </div>
+     
+ </div>

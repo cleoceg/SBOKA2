@@ -1,0 +1,107 @@
+<h1 class="display-4">{{data.title}}</h1>
+
+<!-- What is risk? -->
+<nav class="navbar navbar-light bg-faded">
+    <div class="row">
+        <div class="col-sm-2">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#whatis" 
+                    aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">    </button>
+        </div>
+        <div class="col-sm-10">
+            <h2>{{data.gen.title}}</h2>
+        </div>
+    </div>
+ 
+    <div class="collapse" id="whatis">
+        <div class="text-muted p-1">
+			<h4>{{data.gen.title}}</h4>
+			<div *ngFor="let item of data.gen.comment">
+				<p><span class="card-text" [innerHTML]="item"></span><p>
+			</div>
+        </div>
+    </div>
+</nav>
+
+<!-- Difference between risks and issues -->
+<nav class="navbar navbar-light bg-faded">
+    <div class="row">
+        <div class="col-sm-2">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#issue" 
+                    aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">    </button>
+        </div>
+        <div class="col-sm-10">
+            <h2>{{data.issues.title}}</h2>
+        </div>
+    </div>
+ 
+    <div class="collapse" id="issue">
+        <div class="text-muted p-1">
+          <h4>{{data.issues.title}}</h4>
+          <div class="row">
+            <div class="col-sm-6">
+                <div class="card card-block">
+					<div *ngFor="let item of data.risks.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card card-block">
+                        <div *ngFor="let item of data.issues.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block bg-info">
+                    <div *ngFor="let item of data.risk_conclusions.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Risk Attitude -->
+<nav class="navbar navbar-light bg-faded">
+    <div class="row">
+        <div class="col-sm-2">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#attitude" 
+                    aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">    </button>
+        </div>
+        <div class="col-sm-10">
+            <h2>{{data.attitude.title}}</h2>
+        </div>
+    </div>
+ 
+    <div class="collapse" id="attitude">
+        <div class="text-muted p-1">
+          <h4>{{data.attitude.title}}</h4>
+            <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+                        <div *ngFor="let item of data.attitude.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+			<div *ngFor="let item of data.utility.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</nav>
+

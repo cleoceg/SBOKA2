@@ -1,0 +1,26 @@
+
+<h1 class="display-4">{{data.title}}</h1>
+
+<!-- Start Overview -->
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="card card-block">
+				<h4 class="card-title">{{data.overview.title}}</h4>					
+				<div *ngFor="let item of data.overview.comment">
+					<p><span class="card-text" [innerHtml]="item"></span><p>
+				</div>
+			</div>        
+		</div>
+	</div>
+	<!-- End Overview -->
+	<!-- image of the para -->
+	<div class="card card-block">
+		<div class="col-sm-12">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<img class="w-100" src="/{{data.overview.image}}" alt="self-organization">
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+	</div>
+	<!-- end of image of the para -->

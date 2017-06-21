@@ -1,0 +1,161 @@
+<h1 class="display-5">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.title}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.writing.stitle}}" target="_self">{{data.writing.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.minimum.stitle}}" target="_self">{{data.minimum.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.done.stitle}}" target="_self">{{data.done.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.acceptance.stitle}}" target="_self">{{data.acceptance.title}}</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="{{data.overview.title}}" role="tabpanel" target="_self">
+        <!-- Start Overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>					
+					<div *ngFor="let item of data.overview.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Overview -->
+		<!-- image of the para -->
+			<div class="card card-block">
+				<div class="col-sm-12">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<img class="w-100" src="/{{data.overview.image}}" alt="{{data.overview.stitle}}">
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+			</div>
+			<!-- end of image of the para -->
+    </div>
+	
+    <div class="tab-pane" id="{{data.writing.stitle}}" role="tabpanel" target="_self">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    
+						<!-- Start writing -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card card-block">
+									<h4 class="card-title">{{data.writing.title}}</h4>					
+									<div *ngFor="let item of data.writing.comment">
+										<p><span class="card-text" [innerHtml]="item"></span><p>
+									</div>		
+								</div>        
+							</div>
+						</div>
+						<!-- End writing -->
+                    
+                        <!-- Start writing example -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card card-block bg-faded">
+									<h4 class="card-title">{{data.example.title}}</h4>					
+									<div *ngFor="let item of data.example.comment">
+										<p><span class="card-text" [innerHtml]="item"></span><p>
+									</div>		
+								</div>        
+							</div>
+						</div>
+						<!-- End writing example -->
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+    <div class="tab-pane" id="{{data.minimum.stitle}}" role="tabpanel" target="_self">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <div class="card card-block">
+                        <!-- Start minimum -->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card card-block">
+									<h4 class="card-title">{{data.minimum.title}}</h4>					
+									<div *ngFor="let item of data.minimum.comment">
+										<p><span class="card-text" [innerHtml]="item"></span><p>
+									</div>		
+								</div>        
+							</div>
+						</div>
+						<!-- End minimum -->
+                    
+                        <!-- Start minimum cascading -->
+						<!-- Start table -->
+						<div class="card card-block">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th *ngFor="let head of data.cascading.head">
+											{{head}}
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngFor="let row of data.cascading.body">
+										<td *ngFor="let item of row">
+											<li><span [innerHtml]="item"></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- End table -->
+						<!-- End minimum cascading -->
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="tab-pane" id="{{data.done.stitle}}" role="tabpanel" target="_self">
+        <!-- Start done -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.done.title}}</h4>					
+					<div *ngFor="let item of data.done.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End done -->
+    </div>
+	
+	<div class="tab-pane" id="{{data.acceptance.stitle}}" role="tabpanel" target="_self">
+        <!-- Start acceptance -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.acceptance.title}}</h4>					
+					<div *ngFor="let item of data.acceptance.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End acceptance -->
+    </div>
+</div>

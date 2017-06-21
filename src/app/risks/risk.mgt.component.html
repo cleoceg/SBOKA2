@@ -1,0 +1,221 @@
+
+<h1 class="display-4">{{data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.title}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.identification.stitle}}" target="_self">{{data.identification.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.assess_gen.stitle}}" target="_self">{{data.assess_gen.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.prioritization.stitle}}" target="_self">{{data.prioritization.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.mitigation.stitle}}" target="_self">{{data.mitigation.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.communication.stitle}}" target="_self">{{data.communication.stitle}}</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+
+    <div class="tab-pane active" id="{{data.overview.title}}" role="tabpanel" target="_self">
+        <!-- Start overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>
+                         <div *ngFor="let item of data.overview.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End overview -->
+    </div>
+	
+    <div class="tab-pane" id="{{data.identification.stitle}}" role="tabpanel" target="_self">
+        
+        <!-- Start identification -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.identification.title}}</h4>					
+					<div *ngFor="let item of data.identification.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End identification -->
+        <!-- Start techniques -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.risque1.title}}</h4>					
+					<div *ngFor="let item of data.risque1.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                        <h4 class="card-title">{{data.risque2.title}}</h4>					
+					<div *ngFor="let item of data.risque2.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div> 
+                        <h4 class="card-title">{{data.risque3.title}}</h4>					
+					<div *ngFor="let item of data.risque3.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>  
+                        <h4 class="card-title">{{data.risque4.title}}</h4>					
+					<div *ngFor="let item of data.risque4.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div> 
+                        <h4 class="card-title">{{data.risque5.title}}</h4>					
+					<div *ngFor="let item of data.risque5.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div> 
+				</div>
+			</div>
+		</div>
+		<!-- End techniques -->
+        <!-- Start identification spike-->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.spike.title}}</h4>					
+					<div *ngFor="let item of data.spike.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End identification spike -->
+           
+    </div>
+    <div class="tab-pane" id="{{data.assess_gen.stitle}}" role="tabpanel" target="_self">
+        
+        <!-- Start assessment -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.assess_overview.title}}</h4>					
+					<div *ngFor="let item of data.assess_overview.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End assessment -->        
+        <!-- Start techniques -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.assess_tech1.title}}</h4>					
+					<div *ngFor="let item of data.assess_tech1.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                                        <h4 class="card-title">{{data.assess_tech2.title}}</h4>					
+					<div *ngFor="let item of data.assess_tech2.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                                        <h4 class="card-title">{{data.assess_tech3.title}}</h4>					
+					<div *ngFor="let item of data.assess_tech3.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                                        <h4 class="card-title">{{data.assess_tech4.title}}</h4>					
+					<div *ngFor="let item of data.assess_tech4.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+                                        <h4 class="card-title">{{data.assess_tech5.title}}</h4>					
+					<div *ngFor="let item of data.assess_tech5.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End techniques -->         
+    </div>
+    
+    <div class="tab-pane" id="{{data.prioritization.stitle}}" role="tabpanel" target="_self">
+        <!-- Start prioritization -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.prioritization.title}}</h4>					
+					<div *ngFor="let item of data.prioritization.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End prioritization --> 
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.prioritization.image}}" alt="#">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.mitigation.stitle}}" role="tabpanel" target="_self">
+       <!-- Start mitigation -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.mitigation.title}}</h4>					
+					<div *ngFor="let item of data.mitigation.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End mitigation --> 
+    </div>
+    
+    <div class="tab-pane" id="{{data.communication.stitle}}" role="tabpanel" target="_self">
+		<!-- Start communication -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.communication.title}}</h4>					
+					<div *ngFor="let item of data.burndown.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- Start communication burndown-->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.burndown.title}}</h4>					
+					<div *ngFor="let item of data.burndown.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End communication burndown --> 
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.communication.image}}" alt="#">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+    </div>
+    
+</div>

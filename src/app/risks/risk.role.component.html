@@ -1,0 +1,28 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<div class="row mt-2">
+    <div class="col-sm-4">
+		<div class="card card-block">
+			<h4 class="card-title">{{data.role1.title}}</h4>
+			<div *ngFor="let item of data.role1.comment">
+				<p><span class="card-text">{{item}}</span><p>
+			</div>
+		</div>
+	</div>
+    <div class="col-sm-4">
+		<div class="card card-block">
+			<h4 class="card-title">{{data.role2.title}}</h4>
+			<div *ngFor="let item of data.role2.comment">
+				<p><span class="card-text">{{item}}</span><p>
+			</div>
+		</div>
+	</div>
+    <div class="col-sm-4">
+		<div class="card card-block">
+			<h4 class="card-title">{{data.role3.title}}</h4>
+			<div *ngFor="let item of data.role3.comment">
+				<p><span class="card-text">{{item}}</span><p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,150 @@
+
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.tuckman.stitle}}" target="_self">{{data.tuckman.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.conflict.stitle}}" target="_self">{{data.conflict.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.techniques.stitle}}" target="_self">{{data.techniques.stitle}}</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.leadership.stitle}}" target="_self">{{data.leadership.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.maslow.stitle}}" target="_self">{{data.maslow.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.xy.stitle}}" target="_self">{{data.xy.stitle}}</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+
+    <div class="tab-pane active" id="{{data.tuckman.stitle}}" role="tabpanel" target="_self">
+        <!-- Start tuckman -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.tuckman.title}}</h4>					
+					<div *ngFor="let item of data.tuckman.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End tuckman -->
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.tuckman.image}}" alt="self-organization">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.conflict.stitle}}" role="tabpanel" target="_self">
+        <!-- Start conflict -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.conflict.title}}</h4>					
+					<div *ngFor="let item of data.conflict.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End conflict -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.techniques.stitle}}" role="tabpanel" target="_self">
+        <!-- Start techniques -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.techniques.title}}</h4>					
+					<div *ngFor="let item of data.techniques.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End techniques -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.leadership.stitle}}" role="tabpanel" target="_self">
+        <!-- Start leadership -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.leadership.title}}</h4>					
+					<!--div *ngFor="para in data.leadership.comment"-->
+						<div class="card card-block">
+							<h4 class="card-title">{{data.styles.title}}</h4>					
+							<div *ngFor="let item of data.styles.comment">
+								<p><span class="card-text" [innerHtml]="item"></span><p>
+							</div>
+						</div>
+						<div class="card card-block">
+							<h4 class="card-title">{{data.servant.title}}</h4>					
+							<div *ngFor="let item of data.servant.comment">
+								<p><span class="card-text" [innerHtml]="item"></span><p>
+							</div>
+						</div> 
+					<!--/div-->
+				</div>        
+			</div>
+		</div>
+		<!-- End leadership -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.maslow.stitle}}" role="tabpanel" target="_self">
+        <!-- Start maslow -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.maslow.title}}</h4>					
+					<div *ngFor="let item of data.maslow.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End maslow -->
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.maslow.image}}" alt="#">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.xy.stitle}}" role="tabpanel" target="_self">
+        <!-- Start xy -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.xy.title}}</h4>					
+					<div *ngFor="let item of data.xy.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End xy -->
+    </div>
+    
+</div>

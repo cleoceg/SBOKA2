@@ -1,0 +1,138 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.title}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.sprint.stitle}}" target="_self">{{data.sprint.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.impact.stitle}}" target="_self">{{data.impact.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.ppbg.stitle}}" target="_self">{{data.ppbg.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.pbrm.stitle}}" target="_self">{{data.pbrm.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.managing.stitle}}" target="_self">{{data.managing.stitle}}</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+
+    <div class="tab-pane active" id="{{data.overview.title}}" role="tabpanel" target="_self">
+        <!-- Start overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>					
+					<div *ngFor="let item of data.overview.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End overview -->
+    </div>
+	
+	<div class="tab-pane" id="{{data.sprint.stitle}}" role="tabpanel" target="_self">
+        <!-- Start sprint -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.sprint.title}}</h4>					
+					<div *ngFor="let item of data.sprint.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End sprint -->
+		<!-- Start image para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.sprint.image}}" alt="{{data.sprint.title}}">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- End image para -->	
+    </div>
+	
+	<div class="tab-pane" id="{{data.impact.stitle}}" role="tabpanel" target="_self">
+        <!-- Start impact -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.impact.title}}</h4>					
+					<div *ngFor="let item of data.impact.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End impact -->
+		<!-- Start image para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.impact.image}}" alt="{{data.impact.title}}">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- End image para -->
+    </div>
+	
+	<div class="tab-pane" id="{{data.ppbg.stitle}}" role="tabpanel" target="_self">
+        <!-- Start ppbg -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.ppbg.title}}</h4>					
+					<div *ngFor="let item of data.ppbg.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End ppbg -->
+    </div>
+	
+	<div class="tab-pane" id="{{data.pbrm.stitle}}" role="tabpanel" target="_self">
+        <!-- Start pbrm -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.pbrm.title}}</h4>					
+					<div *ngFor="let item of data.pbrm.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End pbrm -->
+    </div>
+	
+	<div class="tab-pane" id="{{data.managing.stitle}}" role="tabpanel" target="_self">
+        <!-- Start managing -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.managing.title}}</h4>					
+					<div *ngFor="let item of data.managing.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End managing -->
+    </div>
+	
+</div>

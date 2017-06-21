@@ -1,0 +1,104 @@
+
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.title}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.core.stitle}}" target="_self">{{data.core.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.noncore.stitle}}" target="_self">{{data.noncore.title}}</a>
+  </li>
+ </ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="{{data.overview.title}}" role="tabpanel" target="_self">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>					
+						<div *ngFor="let item of data.overview.comment">
+							<p><span class="card-text" [innerHtml]="item"></span><p>
+						</div>
+				</div>        
+			</div>
+		</div>
+    </div>
+    
+    <div class="tab-pane" id="{{data.core.stitle}}" role="tabpanel" target="_self">
+        <div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.core.title}}</h4>					
+						<div *ngFor="let item of data.core.comment">
+							<p><span class="card-text" [innerHtml]="item"></span><p>		
+						</div>
+						
+						
+						<div class="card card-block">
+							<h4 class="card-title">{{data.owner.title}}</h4>					
+								<div *ngFor="let item of data.owner.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+						</div>
+						<div class="card card-block">
+							<h4 class="card-title">{{data.sm.title}}</h4>					
+								<div *ngFor="let item of data.sm.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+						</div>
+						<div class="card card-block">
+							<h4 class="card-title">{{data.st.title}}</h4>					
+								<div *ngFor="let item of data.st.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+						</div>
+					
+						<div class="card card-block">
+							<div class="col-sm-12">
+								<div class="col-sm-2"></div>
+								<div class="col-sm-8">
+									<img class="w-100" src="/{{data.core.image}}" alt="self-organization">
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
+						</div>
+				</div>        
+			</div>
+		</div>
+    </div>
+    
+    <div class="tab-pane" id="{{data.noncore.stitle}}" role="tabpanel" target="_self">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.noncore.title}}</h4>					
+						<div *ngFor="let item of data.noncore.comment">
+							<p><span class="card-text" [innerHtml]="item"></span><p>
+						</div>
+					
+					<div class="card card-block">
+						<h4 class="card-title">{{data.stakeholder.title}}</h4>					
+							<div *ngFor="let item of data.stakeholder.comment">
+								<p><span class="card-text" [innerHtml]="item"></span><p>
+							</div>
+					</div>
+					<div class="card card-block">
+						<h4 class="card-title">{{data.vendors.title}}</h4>					
+							<div *ngFor="let item of data.vendors.comment">
+								<p><span class="card-text" [innerHtml]="item"></span><p>
+							</div>
+					</div>
+					<div class="card card-block">
+						<h4 class="card-title">{{data.SGB.title}}</h4>					
+							<div *ngFor="let item of data.SGB.comment">
+								<p><span class="card-text" [innerHtml]="item"></span><p>
+							</div>
+					</div>
+				</div>        
+			</div>
+		</div>
+    </div>  
+</div>

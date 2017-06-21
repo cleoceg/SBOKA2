@@ -1,0 +1,9 @@
+
+<h1 class="display-4">{{data.title}}</h1>
+<div class="card card-block">
+	<div *ngFor="let item of data.comment">
+		<p><span class="card-text" [innerHtml]="item"></span><p>
+	</div>
+</div>
+
+

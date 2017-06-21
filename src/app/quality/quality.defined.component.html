@@ -1,0 +1,60 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.title}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.scope.stitle}}" target="_self">{{data.scope.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.value.stitle}}" target="_self">{{data.value.title}}</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="{{data.overview.title}}" role="tabpanel" target="_self">
+		<!-- Start Overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>					
+					<div *ngFor="let item of data.overview.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Overview -->
+    </div>
+    <div class="tab-pane" id="{{data.scope.stitle}}" role="tabpanel" target="_self">
+        <!-- Start scope -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.scope.title}}</h4>					
+					<div *ngFor="let item of data.scope.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End scope -->
+    </div>
+   
+    <div class="tab-pane" id="{{data.value.stitle}}" role="tabpanel" target="_self">
+        <!-- Start value -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.value.title}}</h4>					
+					<div *ngFor="let item of data.value.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End value -->
+    </div>
+</div>

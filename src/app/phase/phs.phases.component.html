@@ -1,0 +1,15 @@
+<h1>Phases</h1>
+      <!-- Main component for a primary marketing message or call to action -->
+    <div class="col-lg">
+		<div *ngFor="let step of data.steps">
+    
+    
+			<div class="col-sm-6">
+				<div class="card card-block">
+					<h3 class="card-title">{{step.step}}</h3>
+					<p class="card-text">{{step.introduction}}</p>
+					<a routerLink="/{{step.url}}" class="btn btn-primary">Go {{step.step}}</a>
+				</div>
+			</div>
+		</div>
+    </div> <!-- /container -->

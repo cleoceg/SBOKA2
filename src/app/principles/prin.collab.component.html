@@ -1,0 +1,93 @@
+
+
+<h1 class="display-4">{{data.overview.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.title}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.benefits.title}}" target="_self">{{data.benefits.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.importance.stitle}}" target="_self">{{data.importance.title}}</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="{{data.overview.title}}" role="tabpanel" target="_self">
+        <!-- Start Overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>					
+					<div *ngFor="let item of data.overview.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Overview -->
+    </div>
+    <div class="tab-pane" id="{{data.benefits.title}}" role="tabpanel" target="_self">
+        <!-- Start benefits-->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.benefits.title}}</h4>					
+					<div *ngFor="let item of data.benefits.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End benefits-->
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.benefits.image}}" alt="self-organization">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+    </div>
+   
+    <div class="tab-pane" id="{{data.importance.stitle}}" role="tabpanel" target="_self">
+		<!-- Start importance -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.importance.title}}</h4>					
+					<div *ngFor="let item of data.importance.comment">
+						<p><span class="card-text" [innerHTML]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End importance -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                        <div class="col-sm-6">
+                            <div class="card card-block">
+								<p><span class="card-text" [innerHTML]="data.colocated.comment"></span><p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card card-block">
+								<p><span class="card-text" [innerHTML]="data.distributed.comment"></span><p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+

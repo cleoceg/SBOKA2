@@ -1,0 +1,30 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<div class="col-sm-12">    
+    <!-- Start overview -->
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="card card-block">
+				<h4 class="card-title">{{data.overview.title}}</h4>					
+				<div *ngFor="let item of data.overview.comment">
+					<p><span class="card-text" [innerHtml]="item"></span><p>
+				</div>
+			</div>        
+		</div>
+	</div>
+	<!-- End overview -->
+    
+    <!-- Start prototype -->
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="card card-block">
+				<h4 class="card-title">{{data.prototype.title}}</h4>					
+				<div *ngFor="let item of data.prototype.comment">
+					<p><span class="card-text" [innerHtml]="item"></span><p>
+				</div>
+			</div>        
+		</div>
+	</div>
+	<!-- End prototype -->
+    
+</div>

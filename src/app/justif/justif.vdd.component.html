@@ -1,0 +1,85 @@
+
+<h1 class="display-4">{{data.vdd.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.stitle}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.resp_owner.stitle}}" target="_self">{{data.resp_owner.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.resp_other.stitle}}" target="_self">{{data.resp_other.title}}</a>
+  </li>
+ </ul>
+
+ <div class="tab-content">
+
+    <div class="tab-pane active" id="{{data.overview.stitle}}" role="tabpanel" target="_self">
+        <!-- Start overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>					
+					<div *ngFor="let item of data.overview.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End overview -->
+		<!-- Start image para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.overview.image}}" alt="self-organization">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- End image para -->	
+    </div>
+    
+    <div class="tab-pane" id="{{data.resp_owner.stitle}}" role="tabpanel" target="_self">
+        <!-- Start resp_owner -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.resp_owner.title}}</h4>					
+					<div *ngFor="let item of data.resp_owner.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End resp_owner -->
+		<!-- Start image para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.resp_owner.image}}" alt="self-organization">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- End image para -->				
+    </div>
+     
+    <div class="tab-pane" id="{{data.resp_other.stitle}}" role="tabpanel" target="_self">
+        <!-- Start resp_other -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.resp_other.title}}</h4>					
+					<div *ngFor="let item of data.resp_other.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End resp_other -->
+    </div>
+     
+ </div>

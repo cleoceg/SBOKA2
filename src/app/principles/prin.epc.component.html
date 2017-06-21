@@ -1,0 +1,143 @@
+
+<h1 class="display-4">{{data.epc.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.epc.stitle}}" target="_self">{{data.epc.stitle}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.Transparency.title}}" target="_self">{{data.Transparency.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.Inspection.title}}" target="_self">{{data.Inspection.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.Adaptation.title}}" target="_self">{{data.Adaptation.title}}</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="{{data.epc.stitle}}" target="_self" role="tabpanel">
+       <!-- Start Overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.epc.title}}</h4>					
+					<div *ngFor="let item of data.epc.comment">
+                            <p><span class="card-text" [innerHTML]="item"></span><p>
+                        </div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Overview -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.Transparency.title}}" role="tabpanel" target="_self">
+		<!-- Start Transparency -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.Transparency.title}}</h4>					
+					<div *ngFor="let item of data.Transparency.comment">
+                            <p><span class="card-text" [innerHTML]="item"></span><p>
+                        </div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Transparency -->
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.Transparency.image}}" alt="self-organization">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.Inspection.title}}" role="tabpanel" target="_self">
+		<!-- Start Inspection -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.Inspection.title}}</h4>					
+					<div *ngFor="let item of data.Inspection.comment">
+                            <p><span class="card-text" [innerHTML]="item"></span><p>
+                        </div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Inspection -->
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.Inspection.image}}" alt="self-organization">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+    </div>
+    
+    <div class="tab-pane" id="{{data.Adaptation.title}}" role="tabpanel" target="_self">
+        <!-- Start Adaptation part 1-->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+									
+					<div *ngFor="let item of data.Adaptation.part1.comment">
+                            <p><span class="card-text" [innerHTML]="item"></span><p>
+                        </div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Adaptation part 1-->
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.Adaptation.part1.image}}" alt="self-organization">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+		
+		<!-- Start Adaptation part 2-->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+									
+					<div *ngFor="let item of data.Adaptation.part2.comment">
+                            <p><span class="card-text" [innerHTML]="item"></span><p>
+                        </div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Adaptation part 2-->
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.Adaptation.part2.image}}" alt="self-organization">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+    </div>
+    
+</div>
+
+
+
+
+

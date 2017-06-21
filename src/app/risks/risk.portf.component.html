@@ -1,0 +1,54 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<div class="col-sm-12">    
+    <!-- Start intro -->
+    <div class="row">
+	<div class="col-sm-12">
+            <div class="card card-block">
+		<h4 class="card-title">{{data.intro.title}}</h4>					
+                    <div *ngFor="let item of data.intro.comment">
+            <p><span class="card-text" [innerHTML]="item"></span><p>
+          </div>
+            </div>        
+	</div>
+    </div>
+    <!-- End intro -->
+    
+    <!-- Start inportfolio -->
+    <div class="row">
+	<div class="col-sm-12">
+            <div class="card card-block">
+		<h4 class="card-title">{{data.inportfolio.title}}</h4>					
+                    <div *ngFor="let item of data.inportfolio.comment">
+            <p><span class="card-text" [innerHTML]="item"></span><p>
+          </div>
+            </div>        
+	</div>
+    </div>
+    <!-- End inportfolio -->
+    
+    <!-- Start inprogram -->
+    <div class="row">
+	<div class="col-sm-12">
+            <div class="card card-block">
+		<h4 class="card-title">{{data.inprogram.title}}</h4>					
+                    <div *ngFor="let item of data.inprogram.comment">
+            <p><span class="card-text" [innerHTML]="item"></span><p>
+          </div>
+            </div>        
+	</div>
+    </div>
+    <!-- End inprogram -->
+    
+    <!-- image of the para -->
+    <div class="card card-block">
+	<div class="col-sm-12">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <img class="w-100" src="/{{data.data.image}}" alt="#">
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <!-- end of image of the para -->
+</div>

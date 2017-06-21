@@ -1,0 +1,110 @@
+<h1 class="display-4">{{data.data.title}}</h1>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" role="tab" href="#{{data.overview.title}}" target="_self">{{data.overview.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.planning.stitle}}" target="_self">{{data.planning.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.control.stitle}}" target="_self">{{data.control.title}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" role="tab" href="#{{data.pdca.stitle}}" target="_self">{{data.pdca.title}}</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="{{data.overview.title}}" role="tabpanel" target="_self">
+        <!-- Start Overview -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.overview.title}}</h4>					
+					<div *ngFor="let item of data.overview.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End Overview -->
+    </div>
+	
+    <div class="tab-pane" id="{{data.planning.stitle}}" role="tabpanel" target="_self">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-block">
+                    <!-- Start planning -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.plan.title}}</h4>					
+								<div *ngFor="let item of data.plan.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>        
+						</div>
+					</div>
+					<!-- End planning -->
+					<!-- Start planning integration -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card card-block">
+								<h4 class="card-title">{{data.integration.title}}</h4>					
+								<div *ngFor="let item of data.integration.comment">
+									<p><span class="card-text" [innerHtml]="item"></span><p>
+								</div>
+							</div>        
+						</div>
+					</div>
+					<!-- End planning integration -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+    <div class="tab-pane" id="{{data.control.stitle}}" role="tabpanel" target="_self">
+        <!-- Start control -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.control.title}}</h4>					
+					<div *ngFor="let item of data.control.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End control -->
+    </div>
+	
+	<div class="tab-pane" id="{{data.pdca.stitle}}" role="tabpanel" target="_self">
+        <!-- Start pdca -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="card card-block">
+					<h4 class="card-title">{{data.pdca.title}}</h4>					
+					<div *ngFor="let item of data.pdca.comment">
+						<p><span class="card-text" [innerHtml]="item"></span><p>
+					</div>
+				</div>        
+			</div>
+		</div>
+		<!-- End pdca -->
+		<!-- image of the para -->
+		<div class="card card-block">
+			<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<img class="w-100" src="/{{data.pdca.image}}" alt="{{data.pdca.stitle}}">
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+		</div>
+		<!-- end of image of the para -->
+    </div>
+	
+</div>
